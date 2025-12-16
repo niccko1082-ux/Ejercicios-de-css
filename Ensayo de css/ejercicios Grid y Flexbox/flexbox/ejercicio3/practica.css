@@ -1,0 +1,109 @@
+/* Layout base */
+.app {
+  display: flex;
+  height: 100vh;
+  background: #f3f5f8;
+}
+
+/* SIDEBAR */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 250px; /* Base grande */
+  background: #1f2430;
+  color: #fff;
+  padding: 20px;
+  gap: 20px;
+  transition: flex-basis .3s ease; /* ANIMACIÓN */
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  flex-basis: 60px; /* Sidebar colapsado */
+}
+
+.sidebar .logo {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1; /* empuja hacia abajo el botón */
+}
+
+.menu a {
+  padding: 12px;
+  background: #2d3445;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: background .2s;
+}
+.menu a:hover {
+  background: #3d4558;
+}
+
+.toggle {
+  background: #2d3445;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* ocupa TODO el espacio restante */
+  padding: 20px;
+  gap: 20px;
+}
+
+/* HEADER */
+.header {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  flex: 0 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: flex-start;
+}
+
+.card {
+  flex: 1 1 180px;
+  aspect-ratio: 1 / 1;
+  background: #4d7cff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* CONTENT AREA */
+.content {
+  flex: 1; /* CRECE Y OCUPA EL RESTO DEL ESPACIO VERTICAL */
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto; /* Scroll interno sin romper el layout */
+}

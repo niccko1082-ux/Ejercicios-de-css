@@ -1,0 +1,86 @@
+.page{
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas: 
+    "header header header"
+    "sidebar hero hero"
+    "sidebar cards cards"
+    "footer footer footer";
+    background-color: #eee;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    grid-area: header ;
+    background-color: #0ef;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: sidebar ;
+    background-color: rgb(0, 255, 106);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    grid-area: hero;
+    background-color: #54f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-area: cards;
+    background-color: #ddd;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a9a9a9;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #b52a;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+@media (max-width: 800px){
+ .page{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "hero"
+    "sidebar"
+    "cards"
+    "footer";
+ }
+}
+
+ @media (max-width: 500px) {
+    .cards{
+        grid-template-columns: 1fr;
+    }
+ }

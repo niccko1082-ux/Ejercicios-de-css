@@ -111,6 +111,7 @@ body {
 @media (max-width: 500px) {
     .main {
         grid-template-columns: 1fr;
+        padding: 0;
     }
 }
 
